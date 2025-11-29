@@ -1,0 +1,187 @@
+{
+    "categories": [
+        {
+            "name": "Philosophy",
+            "slug": "philosophy",
+            "description": "Deep thinking and philosophical explorations"
+        },
+        {
+            "name": "Design",
+            "slug": "design",
+            "description": "Creative design and innovation"
+        },
+        {
+            "name": "Culture",
+            "slug": "culture",
+            "description": "Cultural observations and commentary"
+        },
+        {
+            "name": "Network",
+            "slug": "network",
+            "description": "Connections and networking"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Alex Morgan",
+            "bio": "Writer and thinker exploring modern culture",
+            "avatar_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex"
+        },
+        {
+            "name": "Jamie Chen",
+            "bio": "Design strategist and creative director",
+            "avatar_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Jamie"
+        },
+        {
+            "name": "Taylor Rivers",
+            "bio": "Philosophy enthusiast and educator",
+            "avatar_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Taylor"
+        }
+    ],
+    "content_items": [
+        {
+            "title": "Leaning Into the Mundane",
+            "description": "Exploring the beauty and depth found in everyday moments and ordinary experiences",
+            "category": "philosophy",
+            "author": "Taylor Rivers",
+            "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+            "tags": [
+                "mindfulness",
+                "philosophy",
+                "everyday"
+            ]
+        },
+        {
+            "title": "New Model for Design Studios",
+            "description": "Reimagining how modern design studios can operate in the digital age",
+            "category": "design",
+            "author": "Jamie Chen",
+            "image_url": "https://images.unsplash.com/photo-1558655146-d09347e92766",
+            "tags": [
+                "design",
+                "business",
+                "innovation"
+            ]
+        },
+        {
+            "title": "When the Message is Beyond the Medium",
+            "description": "Understanding communication that transcends its delivery method",
+            "category": "culture",
+            "author": "Alex Morgan",
+            "image_url": "https://images.unsplash.com/photo-1516321497487-e288fb19713f",
+            "tags": [
+                "communication",
+                "media",
+                "culture"
+            ]
+        },
+        {
+            "title": "How to Re-contextualize Your Upbringing",
+            "description": "A fresh perspective on childhood experiences and their lasting impact",
+            "category": "philosophy",
+            "author": "Taylor Rivers",
+            "image_url": "https://images.unsplash.com/photo-1503455637927-730bce8583c0",
+            "tags": [
+                "personal growth",
+                "philosophy",
+                "reflection"
+            ]
+        },
+        {
+            "title": "A Conversation With No-Plans",
+            "description": "The art of spontaneous dialogue and unstructured thinking",
+            "category": "culture",
+            "author": "Alex Morgan",
+            "image_url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+            "tags": [
+                "conversation",
+                "spontaneity",
+                "culture"
+            ]
+        },
+        {
+            "title": "The Delusion of Passion",
+            "description": "Questioning the modern obsession with finding and following passion",
+            "category": "philosophy",
+            "author": "Taylor Rivers",
+            "image_url": "https://images.unsplash.com/photo-1502139214982-d0ad755818d8",
+            "tags": [
+                "philosophy",
+                "career",
+                "purpose"
+            ]
+        },
+        {
+            "title": "Minimalism in Modern Spaces",
+            "description": "Creating calm and functional environments through thoughtful design",
+            "category": "design",
+            "author": "Jamie Chen",
+            "image_url": "https://images.unsplash.com/photo-1449844908441-8829872d2607",
+            "tags": [
+                "design",
+                "minimalism",
+                "architecture"
+            ]
+        },
+        {
+            "title": "The Network Effect",
+            "description": "How connections multiply value in the digital age",
+            "category": "network",
+            "author": "Alex Morgan",
+            "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+            "tags": [
+                "network",
+                "technology",
+                "connections"
+            ]
+        },
+        {
+            "title": "Design Systems That Scale",
+            "description": "Building cohesive design languages for growing organizations",
+            "category": "design",
+            "author": "Jamie Chen",
+            "image_url": "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+            "tags": [
+                "design",
+                "systems",
+                "scalability"
+            ]
+        },
+        {
+            "title": "The Art of Intentional Living",
+            "description": "Making conscious choices in an age of distraction",
+            "category": "philosophy",
+            "author": "Taylor Rivers",
+            "image_url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+            "tags": [
+                "philosophy",
+                "mindfulness",
+                "intentionality"
+            ]
+        },
+        {
+            "title": "Cultural Shifts in Remote Work",
+            "description": "How distributed teams are reshaping workplace culture",
+            "category": "culture",
+            "author": "Alex Morgan",
+            "image_url": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+            "tags": [
+                "culture",
+                "work",
+                "remote"
+            ]
+        },
+        {
+            "title": "Typography as Voice",
+            "description": "How font choices communicate personality and intent",
+            "category": "design",
+            "author": "Jamie Chen",
+            "image_url": "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+            "tags": [
+                "design",
+                "typography",
+                "communication"
+            ]
+        }
+    ]
+}

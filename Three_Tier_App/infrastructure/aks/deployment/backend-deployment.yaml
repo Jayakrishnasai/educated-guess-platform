@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  labels:
+    app: educated-guess-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: educated-guess-backend
+  template:
+    metadata:
+      labels:
+        app: educated-guess-backend
+    spec:
+      containers:
+      - name: backend
+        image: <ACR_NAME>.azurecr.io/educated-guess-backend:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: MONGODB_URL
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: mongodb_url
+        - name: MONGODB_DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: mongodb_db_name
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: jwt_secret_key
+        - name: ALGORITHM
+          value: "HS256"
+        - name: ACCESS_TOKEN_EXPIRE_MINUTES
+          value: "30"
+        - name: ALLOWED_ORIGINS
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: allowed_origins
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /api/liveness
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /api/readiness
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+      imagePullSecrets:
+      - name: acr-secret
