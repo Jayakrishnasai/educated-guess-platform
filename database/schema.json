@@ -1,0 +1,153 @@
+{
+  "collections": {
+    "content_items": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": ["title", "description", "created_at"],
+          "properties": {
+            "title": {
+              "bsonType": "string",
+              "description": "Content title - required"
+            },
+            "description": {
+              "bsonType": "string",
+              "description": "Content description - required"
+            },
+            "category_id": {
+              "bsonType": "string",
+              "description": "Reference to category"
+            },
+            "author_id": {
+              "bsonType": "string",
+              "description": "Reference to author"
+            },
+            "image_url": {
+              "bsonType": "string",
+              "description": "URL to content image"
+            },
+            "tags": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              },
+              "description": "Content tags"
+            },
+            "created_at": {
+              "bsonType": "date",
+              "description": "Creation timestamp - required"
+            }
+          }
+        }
+      },
+      "indexes": [
+        {
+          "key": { "title": "text", "description": "text" },
+          "name": "content_text_search"
+        },
+        {
+          "key": { "category_id": 1 },
+          "name": "category_index"
+        },
+        {
+          "key": { "created_at": -1 },
+          "name": "created_at_index"
+        }
+      ]
+    },
+    "categories": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": ["name", "slug"],
+          "properties": {
+            "name": {
+              "bsonType": "string",
+              "description": "Category name - required"
+            },
+            "slug": {
+              "bsonType": "string",
+              "description": "URL-friendly slug - required"
+            },
+            "description": {
+              "bsonType": "string",
+              "description": "Category description"
+            }
+          }
+        }
+      },
+      "indexes": [
+        {
+          "key": { "slug": 1 },
+          "name": "slug_unique",
+          "unique": true
+        }
+      ]
+    },
+    "users": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": ["email", "hashed_password", "full_name"],
+          "properties": {
+            "email": {
+              "bsonType": "string",
+              "description": "User email - required"
+            },
+            "hashed_password": {
+              "bsonType": "string",
+              "description": "Hashed password - required"
+            },
+            "full_name": {
+              "bsonType": "string",
+              "description": "User full name - required"
+            },
+            "is_active": {
+              "bsonType": "bool",
+              "description": "Account active status"
+            },
+            "created_at": {
+              "bsonType": "date",
+              "description": "Account creation timestamp"
+            }
+          }
+        }
+      },
+      "indexes": [
+        {
+          "key": { "email": 1 },
+          "name": "email_unique",
+          "unique": true
+        }
+      ]
+    },
+    "authors": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": ["name"],
+          "properties": {
+            "name": {
+              "bsonType": "string",
+              "description": "Author name - required"
+            },
+            "bio": {
+              "bsonType": "string",
+              "description": "Author biography"
+            },
+            "avatar_url": {
+              "bsonType": "string",
+              "description": "URL to author avatar"
+            }
+          }
+        }
+      },
+      "indexes": [
+        {
+          "key": { "name": 1 },
+          "name": "name_index"
+        }
+      ]
+    }
+  }
+}
